@@ -1,0 +1,229 @@
+CRITICAL - 2023-12-28 05:02:16 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:07:16 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:09:51 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:18:49 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:19:39 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:25:43 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-28 05:28:12 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = 0
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-28 05:28:12 --> pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = 0
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = 0
+                              ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "activo" = 0
+WHERE "id" = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "activo" = 0
+WHERE "id" = \'7\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "activo" = 0
+WHERE "id" = \'7\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "activo" = :activo:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:28:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = 0
+                              ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-28 05:30:50 --> Class "App\Models\UsuarioModel" not found
+in APPPATH\Controllers\Home.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-28 05:39:59 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «estado» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;estado&quot; = 'inactivo'
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-28 05:39:59 --> pg_query(): Query failed: ERROR:  no existe la columna «estado» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;estado&quot; = 'inactivo'
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la columna «estado» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;estado&quot; = \'inactivo\'
+                              ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "estado" = \'inactivo\'
+WHERE "id" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "estado" = \'inactivo\'
+WHERE "id" = \'4\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "estado" = \'inactivo\'
+WHERE "id" = \'4\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "estado" = :estado:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:39:59 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  no existe la columna «estado» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;estado&quot; = 'inactivo'
+                              ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(91): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-28 05:42:00 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(94): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-28 05:42:00 --> pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "activo" = FALSE
+WHERE "id" = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "activo" = FALSE
+WHERE "id" = \'4\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "activo" = FALSE
+WHERE "id" = \'4\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "activo" = :activo:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(94): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:42:00 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(94): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-28 05:46:43 --> Undefined variable $result
+in APPPATH\Controllers\Home.php on line 91.
+ 1 APPPATH\Controllers\Home.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'C:\\xampp\\htdocs\\CI4\\app\\Controllers\\Home.php', 91)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('4')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-28 05:59:11 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

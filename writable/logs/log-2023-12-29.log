@@ -1,0 +1,1462 @@
+CRITICAL - 2023-12-29 01:52:36 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-29 02:21:58 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 1: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(57): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 02:21:58 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 1: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 1: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (:usuario:, :nombre:, :apellido:, :correo_electronico:, :telefono:, :fecha_registro:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(57): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:21:59 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 1: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(57): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 02:22:42 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'INSERT INTO usu...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usu...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usu...')
+#4 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#5 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-29 02:22:42 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 APPPATH\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (?, ?, ?, ?, ?, ?)', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:22:42 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#1 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 02:23:12 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'INSERT INTO usu...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usu...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usu...')
+#4 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#5 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-29 02:23:12 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 APPPATH\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (?, ?, ?, ?, ?, ?)', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:23:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#1 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 02:23:16 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'INSERT INTO usu...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usu...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usu...')
+#4 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#5 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-29 02:23:16 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 APPPATH\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (?, ?, ?, ?, ?, ?)', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:23:16 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\app\Controllers\Home.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#1 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-29 02:23:41 --> Cannot redeclare App\Controllers\Home::createUser()
+in APPPATH\Controllers\Home.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-29 02:24:12 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:24:16 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:24:37 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:24:40 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:35:55 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:36:08 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:49:31 --> Undefined variable $userData
+in APPPATH\Controllers\Home.php on line 45.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\CI4\\app\\Controllers\\Home.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:49:56 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:50:10 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:50:23 --> Undefined variable $userData
+in APPPATH\Controllers\Home.php on line 43.
+ 1 APPPATH\Controllers\Home.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $userData', 'C:\\xampp\\htdocs\\CI4\\app\\Controllers\\Home.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-29 02:55:59 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'INSERT INTO usu...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usu...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usu...')
+#4 C:\xampp\htdocs\CI4\app\Controllers\Home.php(53): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#5 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-29 02:55:59 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 APPPATH\Controllers\Home.php(53): CodeIgniter\Database\BaseConnection->query('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (?, ?, ?, ?, ?, ?)', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:55:59 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\app\Controllers\Home.php(53): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#1 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 02:56:40 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'INSERT INTO usu...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usu...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usu...')
+#4 C:\xampp\htdocs\CI4\app\Controllers\Home.php(51): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#5 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-29 02:56:40 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')
+                                                               ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (\'valor\', \'valor\', \'valor\', \'valor\', \'valor\', \'valor\')')
+ 5 APPPATH\Controllers\Home.php(51): CodeIgniter\Database\BaseConnection->query('INSERT INTO usuarios (usuario, nombre, apellido, correo_electronico, telefono, fecha_registro) 
+                                  VALUES (?, ?, ?, ?, ?, ?)', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:56:40 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «valor»
+LINE 2: ...ALUES ('valor', 'valor', 'valor', 'valor', 'valor', 'valor')
+                                                               ^
+#0 C:\xampp\htdocs\CI4\app\Controllers\Home.php(51): CodeIgniter\Database\BaseConnection->query('INSERT INTO usu...', Array)
+#1 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->createUser()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-29 02:58:27 --> Undefined variable $fecha_formateada
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fecha_formateada', 'C:\\xampp\\htdocs\\CI4\\app\\Controllers\\Home.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 02:59:49 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:04:16 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-29 03:08:21 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:08:21 --> pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+in SYSTEMPATH\Database\Postgre\Connection.php on line 212.
+ 1 SYSTEMPATH\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+ 2 APPPATH\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:08:21 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#5 {main}
+  thrown
+【Previous Exception】
+TypeError
+pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+#0 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 03:08:46 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:08:46 --> pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+in SYSTEMPATH\Database\Postgre\Connection.php on line 212.
+ 1 SYSTEMPATH\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+ 2 APPPATH\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:08:46 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#5 {main}
+  thrown
+【Previous Exception】
+TypeError
+pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+#0 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('7')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 03:09:04 --> ErrorException: pg_query(): Query failed: ERROR:  no existe la columna «activo» en la relación «usuarios»
+LINE 1: UPDATE &quot;usuarios&quot; SET &quot;activo&quot; = FALSE
+                              ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #134, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(83): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('2')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:09:04 --> pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+in SYSTEMPATH\Database\Postgre\Connection.php on line 212.
+ 1 SYSTEMPATH\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+ 2 APPPATH\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:09:04 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#5 {main}
+  thrown
+【Previous Exception】
+TypeError
+pg_affected_rows(): Argument #1 ($result) must be of type resource, bool given
+#0 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(212): pg_affected_rows(false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(85): CodeIgniter\Database\Postgre\Connection->affectedRows()
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->deactivateUser('2')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-29 03:16:13 --> Too few arguments to function App\Controllers\Home::createUser(), 0 passed in C:\xampp\htdocs\CI4\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Home.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->createUser()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-29 03:52:49 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (9, null, null, null, null, null, null). in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:52:49 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (9, null, null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (9, null, null, null, null, null, null).', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (:usuario:, :nombre:, :apellido:, :correo_electronico:, :telefono:, :fecha_registro:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:52:50 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (9, null, null, null, null, null, null).
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 03:53:00 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (10, null, null, null, null, null, null). in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:53:00 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (10, null, null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (10, null, null, null, null, null, null).', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (:usuario:, :nombre:, :apellido:, :correo_electronico:, :telefono:, :fecha_registro:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:53:00 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (10, null, null, null, null, null, null).
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 03:53:51 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (11, null, null, null, null, null, null). in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:53:51 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (11, null, null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (11, null, null, null, null, null, null).', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (:usuario:, :nombre:, :apellido:, :correo_electronico:, :telefono:, :fecha_registro:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:53:51 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (11, null, null, null, null, null, null).
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 03:55:05 --> ErrorException: pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (12, null, null, null, null, null, null). in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 03:55:06 --> pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (12, null, null, null, null, null, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (12, null, null, null, null, null, null).', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (NULL, NULL, NULL, NULL, NULL, NULL)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "usuarios" ("usuario", "nombre", "apellido", "correo_electronico", "telefono", "fecha_registro") VALUES (:usuario:, :nombre:, :apellido:, :correo_electronico:, :telefono:, :fecha_registro:)', [...], false)
+ 6 APPPATH\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 03:55:06 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  el valor nulo en la columna «usuario» de la relación «usuarios» viola la restricción de no nulo
+DETAIL:  La fila que falla contiene (12, null, null, null, null, null, null).
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(73): CodeIgniter\Database\BaseBuilder->insert(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->insertUser()
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:19:48 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:19:48 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:19:48 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:21:12 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:21:12 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:21:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:21:21 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:21:21 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:21:21 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:21:28 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:21:28 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:21:28 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:23:47 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:23:47 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:23:47 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:24:21 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:24:21 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:24:21 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:25:45 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:25:45 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:25:45 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:26:15 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:26:15 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:26:15 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:28:57 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:28:57 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:28:58 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:29:09 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:29:09 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:29:09 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(135): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:32:12 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:32:12 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:32:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-12-29 04:32:29 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^ in C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\CI4\system\Database\Postgre\Connection.php(187): pg_query(Resource id #137, 'UPDATE "usuario...')
+#2 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuario...')
+#3 C:\xampp\htdocs\CI4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuario...')
+#4 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#5 C:\xampp\htdocs\CI4\app\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update(Array)
+#6 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#7 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-12-29 04:32:29 --> pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (\'\'), &quot;telefono&quot; = (\'\'), &quot;fecha_registro&quot; = (\'\')
+                                                                    ^', 'C:\\xampp\\htdocs\\CI4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(resource (pgsql link), 'UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "usuarios" SET "usuario" = (\'\'), "nombre" = (\'\'), "apellido" = (\'\'), "correo_electronico" = (\'\'), "telefono" = (\'\'), "fecha_registro" = (\'\')
+WHERE "id" = \'1\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuarios" SET "usuario" = :usuario:, "nombre" = :nombre:, "apellido" = :apellido:, "correo_electronico" = :correo_electronico:, "telefono" = :telefono:, "fecha_registro" = :fecha_registro:
+WHERE "id" = :id:', [...], false)
+ 6 APPPATH\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 04:32:29 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Type is not supported in C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\CI4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(345): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\CI4\system\API\ResponseTrait.php(98): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\CI4\system\Debug\Exceptions.php(150): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Database\Exceptions\DatabaseException
+pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo date: «»
+LINE 1: ...ctronico&quot; = (''), &quot;telefono&quot; = (''), &quot;fecha_registro&quot; = ('')
+                                                                    ^
+#0 C:\xampp\htdocs\CI4\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE "usuario...', Array, false)
+#1 C:\xampp\htdocs\CI4\app\Controllers\Home.php(142): CodeIgniter\Database\BaseBuilder->update(Array)
+#2 C:\xampp\htdocs\CI4\system\CodeIgniter.php(932): App\Controllers\Home->updateUser('1')
+#3 C:\xampp\htdocs\CI4\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\CI4\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\CI4\index.php(67): CodeIgniter\CodeIgniter->run()
+#6 {main}
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-29 04:34:31 --> syntax error, unexpected token "try", expecting "function" or "const"
+in APPPATH\Controllers\Home.php on line 132.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\CI4\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

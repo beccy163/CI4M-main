@@ -1,0 +1,52 @@
+CRITICAL - 2023-07-15 03:24:38 --> pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+in APPPATH\Views\login.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �postgres�', 'C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php', 79)
+ 2 APPPATH\Views\login.php(79): pg_connect('host=127.0.0.1 dbname=db_calzados user=postgres password=1234')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 6 APPPATH\Controllers\Home.php(21): view('login')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 03:34:04 --> pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �MF�
+in APPPATH\Views\login.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): Unable to connect to PostgreSQL server: FATAL:  la autentificaci�n password fall� para el usuario �MF�', 'C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php', 79)
+ 2 APPPATH\Views\login.php(79): pg_connect('host=127.0.0.1 dbname=db_registrossuser=postgres password=1008')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 6 APPPATH\Controllers\Home.php(21): view('login')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 03:34:28 --> pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �db_registros�
+in APPPATH\Views\login.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): Unable to connect to PostgreSQL server: FATAL:  no existe la base de datos �db_registros�', 'C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php', 79)
+ 2 APPPATH\Views\login.php(79): pg_connect('host=127.0.0.1 dbname=db_registros user=postgres password=1008')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 6 APPPATH\Controllers\Home.php(21): view('login')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 03:34:49 --> pg_query(): Query failed: ERROR:  no existe la relación «calzados»
+LINE 1: SELECT * FROM calzados
+                      ^
+in APPPATH\Views\login.php on line 83.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  no existe la relación «calzados»
+LINE 1: SELECT * FROM calzados
+                      ^', 'C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php', 83)
+ 2 APPPATH\Views\login.php(83): pg_query(resource (pgsql link), 'SELECT * FROM calzados')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\CI4\\app\\Views\\login.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 6 APPPATH\Controllers\Home.php(21): view('login')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
